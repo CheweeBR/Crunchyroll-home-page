@@ -1,0 +1,75 @@
+body {
+    margin: 0px;
+    background-color: #191a1c;
+}
+.conteudo {
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: column;
+    height: 1000px;
+    
+}
+
+
+/* Cabeçalho */
+
+.cabeçalho-base {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #23252b;
+    height: 60px;
+    width: 100%;
+  }
+.cabeçalho-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    height: 60px;
+    width: 15%;
+  }
+.icone-crunch{
+    color: #23252b;
+    background-color: white;
+    height: 60px;
+    width: 45%;
+}
+.cabeçalho-right {
+    display: flex;
+    background-color: red;
+    height: 60px;
+    width: 15%;
+  }
+.cabeçalho-left {
+    display: flex;
+    background-color: white;
+    height: 60px;
+    width: 45%;
+  }
+
+/* Centro */
+
+.Centro {
+    display: flex;
+    justify-content: baseline;
+    align-items: auto;
+    background-color: purple;
+    height: 800px;
+    width: 100%;
+}
+.centro-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: orange;
+    height: 600px;
+    width: 100%;
+
+}
+.centro-propaganda {
+    background-color: white;
+    height: 400px;
+    width: 40%;
+
+}
