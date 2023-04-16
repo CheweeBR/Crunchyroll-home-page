@@ -42,7 +42,6 @@ body {
     background-color: #23252b;
     height: 65px;
     width: 45%;
-    padding: 5px;
     margin-right: 20px;
     transition: all 0.3s;
 }
@@ -50,27 +49,64 @@ body {
     fill: white;
 }
 .cabeçalho-right {
-    display: flex;
-    background-color: red;
     height: 60px;
-    width: 15%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    background-color: #23252b;
+    height: 60px;
+    width: 20%;
   }
+.opçoes-right{
+    font-size: 11px;
+    padding: 16px;
+    display: flex;
+    color: rgb(226, 223, 223);
+    transition: all;
+    align-items: center;
+    justify-content: left;
+    flex-direction: row;
+    transition: all 0,1s;
+}
+.opçoes-right:hover{
+    background-color: #141519;
+}
+#teste-gratis {
+    color: #fab818;
+}
+#texto-premium {
+    color:rgb(226, 223, 223);
+}
+#texto-premium:hover{
+    color:white;
+}
+.Premium-icone{
+    width: 25px;
+    fill: #fab818;
+}
+.Icones-right{
+    fill:rgb(226, 223, 223);
+    display: flex;
+    width: 25px;
+}
+
 .cabeçalho-left {
     display: flex;
     justify-content: left;
     flex-direction: row;
     background-color: #23252b;
     height: 60px;
-    width: 60%;
+    width: 55%;
   }
 
 .opçoes-left{
-    padding: 15px;
+    padding: 13px;
     display: flex;
     color: rgb(226, 223, 223);
     align-items: center;
     justify-content: center;
-    transition: all;
+    transition: all 0.1s;
 }
 .opçoes-left:hover {
     background-color: #141519;
@@ -90,6 +126,7 @@ body {
 }
 .centro-img {
     display: flex;
+    flex-wrap:wrap;
     align-items: center;
     justify-content: center;
     background-color: orange;
@@ -99,9 +136,11 @@ body {
 }
 .centro-propaganda {
     display: flex;
+    padding-left: 125px;
+    padding-right: 125px;
     justify-content: center;
-    background-color: white;
-    height: 400px;
+    background-color:orange;
+    height: 535px;
     width: 40%;
 
 }
@@ -129,18 +168,29 @@ body {
 .Seta-direita {
     height: 40px;
     width: 2%;
+    transition: all 0.2s;
+}
+.Seta-direita:hover {
+    background-color: #23252b;
 }
 .Seta-esquerda{
     height: 40px;
     width: 2%;
     transform: rotate(180deg);
+    transition: all 0.2s;
+}
+.Seta-esquerda:hover {
+    background-color: #23252b;
 }
 .Seta-baixo{
-    height: 40px;
+    height: 45px;
     width: 20%;
-    fill: white;
+    fill: rgb(226, 223, 223);
+    transition: all;
 }
-
+.Seta-baixo:hover{
+    fill: White;
+}
 /* Parte Inferior*/
 .Bottom {
     display: flex;
