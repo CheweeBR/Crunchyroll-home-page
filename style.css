@@ -1,18 +1,16 @@
 body {
     margin: 0px;
-    background-color: #191a1c;
+    background-color: #040404;
     font-family: Lato,Helvetica;
 }
-@media screen and (min-width: 800px) {
-    .container {
-      margin: 1em 2em;
-    }
-  }
 .conteudo {
     display: flex;
     justify-content: center;
     flex-wrap:wrap;
-    flex-direction: column;
+    flex-direction: row;
+    width: 100%;
+    max-width: 100%;
+
 }
 
 
@@ -21,6 +19,7 @@ body {
 .cabeçalho-base {
     display: flex;
     align-items: center;
+    flex-wrap:wrap;
     justify-content: center;
     background-color: #23252b;
     height: 60px;
@@ -40,7 +39,7 @@ body {
     justify-content: end;
     fill: #f47521;
     background-color: #23252b;
-    height: 65px;
+    height: 70px;
     width: 45%;
     margin-right: 20px;
     transition: all 0.3s;
@@ -66,8 +65,10 @@ body {
     transition: all;
     align-items: center;
     justify-content: left;
+    flex-wrap:wrap;
     flex-direction: row;
     transition: all 0,1s;
+    object-fit: contain;
 }
 .opçoes-right:hover{
     background-color: #141519;
@@ -89,6 +90,7 @@ body {
     fill:rgb(226, 223, 223);
     display: flex;
     width: 25px;
+    object-fit: contain;
 }
 
 .cabeçalho-left {
@@ -117,17 +119,20 @@ body {
 
 .Centro {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    align-content: start;
     flex-wrap:wrap;
-    background-color: #23252b;
+    background-color: #040404;
     height: 700px;
     width: 100%;
 }
 .centro-img {
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap:nowrap;
     align-items: center;
+    flex-direction: row;
     justify-content: center;
     background-color: orange;
     height: 600px;
@@ -139,6 +144,7 @@ body {
     padding-left: 125px;
     padding-right: 125px;
     justify-content: center;
+    object-fit: contain;
     background-color:orange;
     height: 535px;
     width: 40%;
@@ -148,21 +154,26 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #23252b;
+    background-color: #040404;
     transition: all 0.5s;
-    height: 100px;
-    width: 60%;
+    height: 75px;
+    width: 55%;
 }
 
 .centro-titulo{
     display: flex;
     align-items: center;
+    margin: 5px;
+    padding: 2px;
     justify-content: space-around;
     color: white;
-    background-color: #141519;
-    height: 60px;
-    width: 45%;
-    border: red 2px;
+    background-color: #23252b;
+    transition: all 0.2s;
+    height: 50px;
+    width: 50%;
+}
+.centro-titulo:hover{
+    background-color:  #6d7079f0;
 }
 
 .Seta-direita {
@@ -196,7 +207,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #23252b;
+    background-color: #040404;
     height: 100px;
     width: 100%;
 }
@@ -205,7 +216,13 @@ body {
     align-items: center;
     justify-content: center;
     color: white;
-    background-color: #141519;
+    background-color:#23252b;
     height: 50px;
-    width: 60%;
+    width: 55%;
+}
+.icone-exclamação{
+    height: 50px;
+    width: 2%;
+    padding: 5px;
+    fill:white;
 }
