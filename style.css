@@ -38,10 +38,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: end;
-    color: white;
+    fill: #f47521;
     background-color: #23252b;
-    height: 60px;
+    height: 65px;
     width: 45%;
+    padding: 5px;
+    margin-right: 20px;
+    transition: all 0.3s;
+}
+.icone-crunch:hover{
+    fill: white;
 }
 .cabeçalho-right {
     display: flex;
@@ -55,15 +61,20 @@ body {
     flex-direction: row;
     background-color: #23252b;
     height: 60px;
-    width: 45%;
+    width: 60%;
   }
 
 .opçoes-left{
-    margin: 10px;
+    padding: 15px;
     display: flex;
-    color: white;
+    color: rgb(226, 223, 223);
     align-items: center;
     justify-content: center;
+    transition: all;
+}
+.opçoes-left:hover {
+    background-color: #141519;
+    color: white;
 }
 
 /* Centro */
@@ -88,6 +99,7 @@ body {
 }
 .centro-propaganda {
     display: flex;
+    justify-content: center;
     background-color: white;
     height: 400px;
     width: 40%;
@@ -98,9 +110,11 @@ body {
     align-items: center;
     justify-content: space-around;
     background-color: #23252b;
+    transition: all 0.5s;
     height: 100px;
     width: 60%;
 }
+
 .centro-titulo{
     display: flex;
     align-items: center;
@@ -120,6 +134,11 @@ body {
     height: 40px;
     width: 2%;
     transform: rotate(180deg);
+}
+.Seta-baixo{
+    height: 40px;
+    width: 20%;
+    fill: white;
 }
 
 /* Parte Inferior*/
