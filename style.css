@@ -1,13 +1,18 @@
 body {
     margin: 0px;
     background-color: #191a1c;
+    font-family: Lato,Helvetica;
 }
+@media screen and (min-width: 800px) {
+    .container {
+      margin: 1em 2em;
+    }
+  }
 .conteudo {
     display: flex;
+    justify-content: center;
     flex-wrap:wrap;
     flex-direction: column;
-    height: 1000px;
-    
 }
 
 
@@ -24,14 +29,17 @@ body {
 .cabeçalho-logo {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: green;
+    justify-content: end;
+    background-color: #23252b;
     height: 60px;
     width: 15%;
   }
 .icone-crunch{
-    color: #23252b;
-    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    color: white;
+    background-color: #23252b;
     height: 60px;
     width: 45%;
 }
@@ -43,19 +51,30 @@ body {
   }
 .cabeçalho-left {
     display: flex;
-    background-color: white;
+    justify-content: left;
+    flex-direction: row;
+    background-color: #23252b;
     height: 60px;
     width: 45%;
   }
+
+.opçoes-left{
+    margin: 10px;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
 
 /* Centro */
 
 .Centro {
     display: flex;
-    justify-content: baseline;
-    align-items: auto;
-    background-color: purple;
-    height: 800px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+    background-color: #23252b;
+    height: 700px;
     width: 100%;
 }
 .centro-img {
@@ -68,8 +87,56 @@ body {
 
 }
 .centro-propaganda {
+    display: flex;
     background-color: white;
     height: 400px;
     width: 40%;
 
+}
+.centro-options{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #23252b;
+    height: 100px;
+    width: 60%;
+}
+.centro-titulo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    background-color: #141519;
+    height: 60px;
+    width: 45%;
+    border: red 2px;
+}
+
+.Seta-direita {
+    height: 40px;
+    width: 2%;
+}
+.Seta-esquerda{
+    height: 40px;
+    width: 2%;
+    transform: rotate(180deg);
+}
+
+/* Parte Inferior*/
+.Bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #23252b;
+    height: 100px;
+    width: 100%;
+}
+.bottom-msg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #141519;
+    height: 50px;
+    width: 60%;
 }
