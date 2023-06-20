@@ -9,7 +9,7 @@ body {
     flex-wrap:wrap;
     flex-direction: row;
     width: 100%;
-    max-width: 100%;
+    max-width: 1920px;
 
 }
 
@@ -139,6 +139,14 @@ body {
     width: 100%;
 
 }
+
+@supports (display: flex) {
+    @media screen and (min-width: 900px) {
+      article {
+        display: flex;
+      }
+    }
+  }
 .centro-propaganda {
     display: flex;
     padding-left: 125px;
@@ -147,6 +155,7 @@ body {
     object-fit: contain;
     background-color:orange;
     height: 535px;
+    max-width: 960px;
     width: 40%;
 
 }
