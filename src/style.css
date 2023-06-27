@@ -13,6 +13,72 @@ body {
 
 }
 
+/* Proporção */
+
+@media(min-width:1135px){
+    .Propaganda{ 
+        max-height: 85%;
+    }
+    .centro-propaganda{
+        max-height: 85%;
+    }
+}
+
+@media(min-width:750px) and (max-width: 1135px){
+    .Propaganda{ 
+        max-height: 85%;
+    }
+    .centro-propaganda{
+        max-height: 85%;
+    }
+    .centro-titulo {
+        max-height: 5px;
+    }
+    #centro-options-text {
+        visibility: hidden;
+    }
+}
+@media(min-width:450px) and (max-width: 750px){ 
+    .Propaganda{ 
+        max-height: 65%;
+    }
+    .centro-propaganda{
+        max-height: 65%;
+    }
+    .centro-titulo {
+        max-height: 5px;
+    }
+    #centro-options-text {
+        visibility: hidden;
+    }
+}
+
+@media(max-width: 450px){
+    .Propaganda{ 
+        max-height: 80%;
+        min-width: 100%;
+    }
+  .centro-propaganda{
+        max-height: 100%;
+    }
+    .centro-img {
+        max-height: 490px;
+    }
+    .opçoes-left{
+        max-width: 0%;
+        visibility: hidden;
+    }
+    .cabeçalho-left{
+        max-width: 30%;
+    }
+    .centro-titulo {
+        max-height: 5px;
+        max-width: 30%;
+    }
+    #centro-options-text {
+        visibility: hidden;
+    }
+}
 
 /* Cabeçalho */
 
@@ -39,9 +105,9 @@ body {
     justify-content: end;
     fill: #f47521;
     background-color: #23252b;
-    height: 70px;
+    height: 100%;
     width: 45%;
-    margin-right: 20px;
+    margin-right: 10%;
     transition: all 0.3s;
 }
 .icone-crunch:hover{
@@ -54,37 +120,24 @@ body {
     align-items: center;
     flex-direction: row;
     background-color: #23252b;
-    height: 60px;
     width: 20%;
   }
 .opçoes-right{
-    font-size: 11px;
-    padding: 16px;
+    padding: 5%;
     display: flex;
     color: rgb(226, 223, 223);
     transition: all;
     align-items: center;
     justify-content: left;
-    flex-wrap:wrap;
-    flex-direction: row;
-    transition: all 0,1s;
-    object-fit: contain;
+    width: 25px;
 }
 .opçoes-right:hover{
     background-color: #141519;
 }
-#teste-gratis {
+
+#Mais_opcoes{
     color: #fab818;
-}
-#texto-premium {
-    color:rgb(226, 223, 223);
-}
-#texto-premium:hover{
-    color:white;
-}
-.Premium-icone{
-    width: 25px;
-    fill: #fab818;
+    font-size: 40px;
 }
 .Icones-right{
     fill:rgb(226, 223, 223);
@@ -98,12 +151,12 @@ body {
     justify-content: left;
     flex-direction: row;
     background-color: #23252b;
-    height: 60px;
+    height: 100%;
     width: 55%;
   }
 
 .opçoes-left{
-    padding: 13px;
+    padding: 1%;
     display: flex;
     color: rgb(226, 223, 223);
     align-items: center;
@@ -117,55 +170,43 @@ body {
 
 /* Centro */
 
-.Centro {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    align-content: start;
-    flex-wrap:wrap;
-    background-color: #040404;
-    height: 700px;
-    width: 100%;
-}
 .centro-img {
     display: flex;
-    flex-wrap:nowrap;
+    flex-wrap: nowrap;
     align-items: center;
     flex-direction: row;
     justify-content: center;
     background-color: orange;
     height: 600px;
     width: 100%;
-
 }
 
-@supports (display: flex) {
-    @media screen and (min-width: 900px) {
-      article {
-        display: flex;
-      }
-    }
-  }
+
+.Propaganda {
+    display: flex;
+    height: 100%;
+    width: 80%;
+    transition: all 0.5s;
+}
+
 .centro-propaganda {
     display: flex;
-    padding-left: 125px;
-    padding-right: 125px;
+    padding-left: 7%;
+    padding-right: 7%;
     justify-content: center;
-    object-fit: contain;
-    background-color:orange;
-    height: 535px;
-    max-width: 960px;
-    width: 40%;
-
+    align-items: center;
+    height: 100%;
+    width: 55%;
+    transition: all 0.5s;
 }
 .centro-options{
+    margin-top: 1%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     background-color: #040404;
     transition: all 0.5s;
-    height: 75px;
+    height: 10%;
     width: 55%;
 }
 
@@ -187,7 +228,7 @@ body {
 
 .Seta-direita {
     height: 40px;
-    width: 2%;
+    width: 40px;
     transition: all 0.2s;
 }
 .Seta-direita:hover {
@@ -195,7 +236,7 @@ body {
 }
 .Seta-esquerda{
     height: 40px;
-    width: 2%;
+    width: 40px;
     transform: rotate(180deg);
     transition: all 0.2s;
 }
