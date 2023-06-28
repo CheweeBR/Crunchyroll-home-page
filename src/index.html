@@ -64,7 +64,7 @@
           <div style="order: 0" class="opçoes-right">
             <p id="Mais_opcoes">+</p>
           </div>
-          <div style="order: 1" class="opçoes-right">
+          <div class="opçoes-right" onclick="TelaBuscar()">
             <svg
               class="Icones-right"
               xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +80,7 @@
               ></path>
             </svg>
           </div>
-          <div style="order: 2" class="opçoes-right">
+          <div class="opçoes-right">
             <svg
               class="Icones-right"
               xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +96,7 @@
               ></path>
             </svg>
           </div>
-          <div style="order: 3" class="opçoes-right">
+          <div class="opçoes-right">
             <svg
               class="Icones-right"
               xmlns="http://www.w3.org/2000/svg"
@@ -181,7 +181,21 @@
         </div>
       </div>
     </div>
-    <button id="test">clique em mim</button>
-    <script src="/src/Javascript/ferramentas.js"></script>
+
+    <!-- TESTE JAVA SCRIPT -->
+    <div class="cadastrar">
+      <input id="nome" />
+      <br />
+      <input id="descricao" />
+      <br />
+      <input id="data" />
+      <br />
+      <input id="imagem" />
+      <br />
+      <button id="cadastro" onclick="Cadastrar()">Cadastrar</button>
+    </div>
+    <script src="/src/Javascript/Anime.js"></script>
+    <script src="/src/Javascript/BancoDeDados.js"></script>
+    <script src="/src/Javascript/Menu-CaixadeDialogo.js"></script>
   </body>
 </html>
