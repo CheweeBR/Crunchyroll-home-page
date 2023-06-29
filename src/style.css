@@ -76,7 +76,7 @@ body {
         max-width: 30%;
     }
     #centro-options-text {
-        visibility: hidden;
+        display: none;
     }
 }
 
@@ -166,6 +166,16 @@ body {
 .opçoes-left:hover {
     background-color: #141519;
     color: white;
+}
+
+#telaBuscar {
+    display: none;
+    width: 100%;
+    height: 20px;
+    align-items:center;
+    justify-content: end;
+    color: white;
+    background-color: #141519;
 }
 
 /* Centro */

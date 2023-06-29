@@ -11,35 +11,35 @@ class Anime {
     this.descricao = descricao;
   }
 
-  get getNome() {
+  getNome() {
     return this.nome;
   }
 
-  set setNome(nome) {
+  setNome(nome) {
     this.nome = nome;
   }
 
-  get getImagem() {
+  getImagem() {
     return this.imagem;
   }
 
-  set setImagem(imagem) {
+  setImagem(imagem) {
     this.imagem = imagem;
   }
 
-  get getData() {
+  getData() {
     return this.data;
   }
 
-  set setData(data) {
+  setData(data) {
     this.data = data;
   }
 
-  get getDescricao() {
+  getDescricao() {
     return this.descricao;
   }
 
-  set setDescricao(descricao) {
+  setDescricao(descricao) {
     this.descricao = descricao;
   }
 }
