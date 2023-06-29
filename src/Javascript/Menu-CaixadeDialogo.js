@@ -14,7 +14,3 @@ function TelaBuscar() {
     mostrar.style.display = "none";
   }
 }
-function test() {
-  anime = new Anime();
-  Lista = new Array(Anime());
-}
