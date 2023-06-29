@@ -85,22 +85,6 @@
               class="Icones-right"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              data-t="watchlist-svg"
-              aria-labelledby="watchlist-svg"
-              aria-hidden="false"
-              role="img"
-            >
-              <title id="Fila">Fila</title>
-              <path
-                d="M17 18.113l-3.256-2.326A2.989 2.989 0 0 0 12 15.228c-.629 0-1.232.194-1.744.559L7 18.113V4h10v14.113zM18 2H6a1 1 0 0 0-1 1v17.056c0 .209.065.412.187.581a.994.994 0 0 0 1.394.233l4.838-3.455a1 1 0 0 1 1.162 0l4.838 3.455A1 1 0 0 0 19 20.056V3a1 1 0 0 0-1-1z"
-              ></path>
-            </svg>
-          </div>
-          <div class="opçoes-right">
-            <svg
-              class="Icones-right"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
               data-t="user-settings-svg"
               aria-labelledby="user-settings-svg"
               aria-hidden="true"
@@ -115,35 +99,32 @@
         </div>
       </div>
       <div id="telaBuscar">
-        <p>Buscar:</p>
-        <input type="text" id="telaBuscarInput" />
+        <button id="bt-buscar" onclick="Buscar()">Buscar</button>
+        <input type="text" id="telaBuscarInput" onsend />
+      </div>
+      <div id="telaCadastro">
+        <div class="cadastrar">
+          <h1 id="titulo_telaCadastro">Cadastrar anime</h1>
+          Nome:<input id="nomeCad" />
+          <br />
+          <input id="descricao" />
+          <br />
+          <input id="data" />
+          <br />
+          <input id="imagem" />
+          <br />
+          <button id="bt-cadastro" onclick="Cadastrar()">Cadastrar</button>
+        </div>
+      </div>
+      <div id="telaLista">
+        <div class="result">
+          <h1>Resultado:</h1>
+        </div>
       </div>
       <div class="centro-img">
-        <svg
-          class="Seta-esquerda"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          data-t="angle-left-svg"
-          aria-labelledby="angle-svg"
-          aria-hidden="true"
-          role="img"
-        >
-          <path d="M8.6 7.4L10 6l6 6-6 6-1.4-1.4 4.6-4.6z"></path>
-        </svg>
         <div class="centro-propaganda">
-          <img src="images/hells-paradise-H.jpg" class="Propaganda" />
+          <img src="/src/images/hells-paradise-H.jpg" class="Propaganda" />
         </div>
-        <svg
-          class="Seta-direita"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          data-t="angle-left-svg"
-          aria-labelledby="angle-svg"
-          aria-hidden="true"
-          role="img"
-        >
-          <path d="M8.6 7.4L10 6l6 6-6 6-1.4-1.4 4.6-4.6z"></path>
-        </svg>
       </div>
       <div class="centro-options">
         <div style="order: 0" class="centro-titulo">
@@ -187,20 +168,6 @@
     </div>
 
     <!-- TESTE JAVA SCRIPT -->
-
-    <div class="cadastrar">
-      <input id="nome" />
-      <br />
-      <input id="descricao" />
-      <br />
-      <input id="data" />
-      <br />
-      <input id="imagem" />
-      <br />
-      <button id="bt-cadastro" onclick="Cadastrar()">Cadastrar</button>
-      <br />
-      <button id="bt-buscar" onclick="Buscar()"></button>
-    </div>
     <script src="/src/Javascript/teste.js"></script>
     <script src="/src/Javascript/Anime.js"></script>
     <script src="/src/Javascript/BancoDeDados.js"></script>

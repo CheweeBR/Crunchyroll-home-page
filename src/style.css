@@ -37,6 +37,9 @@ body {
     #centro-options-text {
         visibility: hidden;
     }
+    .opçoes-left{
+        max-width: 70%;
+    }
 }
 @media(min-width:450px) and (max-width: 750px){ 
     .Propaganda{ 
@@ -50,6 +53,9 @@ body {
     }
     #centro-options-text {
         visibility: hidden;
+    }
+    .opçoes-left{
+        max-width: 30%;
     }
 }
 
@@ -78,8 +84,57 @@ body {
     #centro-options-text {
         display: none;
     }
+    #telaBuscar {
+        max-width: 10%;
+        max-height: 0%;
+        margin-top:18%;
+    }
+    
 }
 
+/* Telas com display: none */
+
+#telaCadastro{
+    display: none;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 50%;
+    height: 550px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #23252b;
+    border-radius: 15px;
+}
+
+#telaBuscar {
+    display: none;
+    position: absolute;
+    width: 13%;
+    height: 60px;
+    align-items:center;
+    margin-left: 44%;
+    justify-content: center;
+    color: white;
+    background-color: #23252b;
+}
+
+#telaLista{
+    display: none;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 60%;
+    height: 700px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #23252b;
+    border-radius: 15px;
+}
 /* Cabeçalho */
 
 .cabeçalho-base {
@@ -119,7 +174,7 @@ body {
     justify-content: left;
     align-items: center;
     flex-direction: row;
-    background-color: #23252b;
+
     width: 20%;
   }
 .opçoes-right{
@@ -130,6 +185,8 @@ body {
     align-items: center;
     justify-content: left;
     width: 25px;
+    height: 60px;
+    background-color: #23252b;
 }
 .opçoes-right:hover{
     background-color: #141519;
@@ -168,17 +225,17 @@ body {
     color: white;
 }
 
-#telaBuscar {
-    display: none;
-    width: 100%;
-    height: 20px;
-    align-items:center;
-    justify-content: end;
-    color: white;
-    background-color: #141519;
-}
 
 /* Centro */
+
+
+
+#cadastrar{
+    display: flex;
+    width: 30%;
+    height: 50%;
+    margin-top: 50%;
+}
 
 .centro-img {
     display: flex;

@@ -3,7 +3,7 @@ class BancoDeDados {
     if (localStorage.lista) {
       lista = JSON.parse(localStorage.getItem("Lista"));
     }
-    var nome = document.getElementById("nome").value;
+    var nome = document.getElementById("nomeCad").value;
     var descricao = document.getElementById("descricao").value;
     var data = document.getElementById("data").value;
     var imagem = document.getElementById("imagem").value;
@@ -31,6 +31,10 @@ class BancoDeDados {
       if (resultados.length > 0) {
         console.log(`Resultados da busca para "${Nome}":`);
         resultados.forEach((anime) => {
+          document
+            .querySelector(".Propaganda")
+            .setAttribute("src", anime.imagem);
+          anime.imagem;
           console.log(`Título: ${anime.nome}`);
           console.log(`Descrição: ${anime.descricao}`);
           console.log(`Data: ${anime.data}`);
@@ -44,6 +48,27 @@ class BancoDeDados {
       console.log("Nenhum anime cadastrado.");
     }
   }
+
+  Deletar(Nome) {
+    if (localStorage.lista) {
+      let lista = JSON.parse(localStorage.getItem("Lista"));
+      let resultados = lista.filter((anime) =>
+        anime.nome.toLowerCase().includes(Nome.toLowerCase())
+      );
+
+      if (resultados.length > 0) {
+        lista = lista.filter(
+          (anime) => !anime.nome.toLowerCase().includes(Nome.toLowerCase())
+        );
+        localStorage.setItem("Lista", JSON.stringify(lista));
+        console.log(`O anime "${Nome}" foi deletado com sucesso.`);
+      } else {
+        console.log(`Nenhum anime encontrado com o nome "${Nome}".`);
+      }
+    } else {
+      console.log("Nenhum anime cadastrado.");
+    }
+  }
 }
 
 function Cadastrar() {
@@ -52,7 +77,13 @@ function Cadastrar() {
 }
 
 function Buscar() {
-  let Nome = document.getElementById("nome").value;
+  let Nome = document.getElementById("telaBuscarInput").value;
   const bd = new BancoDeDados();
   bd.Buscar(Nome);
+}
+
+function Deletar() {
+  let Nome = document.getElementById("telaBuscarInput").value;
+  const bd = new BancoDeDados();
+  bd.Deletar(Nome);
 }
