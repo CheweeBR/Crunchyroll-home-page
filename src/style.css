@@ -94,20 +94,6 @@ body {
 
 /* Telas com display: none */
 
-#telaCadastro{
-    display: none;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    width: 50%;
-    height: 550px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background-color: #23252b;
-    border-radius: 15px;
-}
 
 #telaBuscar {
     display: none;
@@ -133,6 +119,32 @@ body {
     left: 50%;
     transform: translate(-50%,-50%);
     background-color: #23252b;
+    border-radius: 15px;
+}
+#telaCadastro{
+    display: none;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 50%;
+    height: 550px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #141519;
+    border-radius: 20px;
+}
+.cadastrar{
+    display: flex;
+}
+.input-cad{
+    color: white;
+    display: flex;
+    background-color:#23252b ;
+    border-color: aliceblue;
+    width: 70%;
+    margin: 5px;
     border-radius: 15px;
 }
 /* Cabeçalho */
