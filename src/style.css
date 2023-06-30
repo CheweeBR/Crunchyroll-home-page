@@ -285,6 +285,7 @@ body {
     height: 100%;
     width: 80%;
     transition: all 0.5s;
+    border-radius: 15px;
 }
 
 .centro-propaganda {

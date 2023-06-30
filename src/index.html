@@ -42,27 +42,11 @@
               <path d="M7 10h10l-5 5z"></path>
             </svg>
           </div>
-          <div style="order: 1" class="opçoes-left"><p>Mangá</p></div>
-          <div style="order: 2" class="opçoes-left"><p>Jogos</p></div>
-          <div style="order: 3" class="opçoes-left">
-            <p>Noticias&nbsp;</p>
-            <svg
-              class="Seta-baixo"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              data-t="dropdown-svg"
-              aria-labelledby="dropdown-svg"
-              aria-hidden="true"
-              role="img"
-            >
-              <title id="dropdown-svg">Menu Noticias</title>
-              <path d="M7 10h10l-5 5z"></path>
-            </svg>
-          </div>
         </div>
         <div class="cabeçalho-right">
           <div class="opçoes-right" onclick="TelaCadastrar()">
             <p id="Mais_opcoes">+</p>
+            <svg><title>Adicionar Anime</title></svg>
           </div>
           <div class="opçoes-right" onclick="TelaBuscar()">
             <svg
@@ -102,7 +86,8 @@
         <button id="bt-buscar" onclick="Buscar()">Buscar</button>
         <input type="text" id="telaBuscarInput" onsend />
       </div>
-      <div id="telaCadastro" title="Adicionar Animes">
+      <div id="telaCadastro">
+        <title>Adicionar Anime</title>
         <h1 id="titulo_telaCadastro">Adicionar Anime</h1>
         <div class="cadastrar">
           Nome:<input id="nomeCad" class="input-cad" />
