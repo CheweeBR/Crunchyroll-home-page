@@ -89,12 +89,16 @@
       <div id="telaCadastro">
         <h1 id="titulo_telaCadastro">Adicionar Anime</h1>
         <div class="cadastrar">
-          Nome:<input id="nomeCad" class="input-cad" />
+          <label id="Txt_Nome_telaCadastro">Nome:</label>
+          <input id="nomeCad" class="input-cad" />
           <br />
+          <label id="Txt_descricao_telaCadastro"></label>
           Descrição:<input id="descricao" class="input-cad" />
           <br />
-          Data:<input id="data" class="input-cad" />
+          <label id="Txt_data_telaCadastro"></label>
+          Data:<input type="date" id="data" class="input-cad" />
           <br />
+          <label id="Txt_link_telaCadastro"></label>
           Link da imagem: <input id="imagem" class="input-cad" />
           <br />
         </div>
@@ -113,10 +117,12 @@
           <div class="result"></div>
         </div>
       </div>
+
       <div class="centro-img">
         <div class="centro-propaganda">
           <img src="/src/images/Crunchyroll.jpg" class="Propaganda" />
         </div>
+        <h1 id="tituloAnime">One Piece</h1>
       </div>
       <div class="centro-options"></div>
       <div class="Bottom">
@@ -143,6 +149,7 @@
     <!-- TESTE JAVA SCRIPT -->
     <button onclick="Deletar()"></button>
     <script src="/src/Javascript/Anime.js"></script>
+    <script src="/src/Javascript/Excecoes.js"></script>
     <script src="/src/Javascript/BancoDeDados.js"></script>
     <script src="/src/Javascript/Menu-CaixadeDialogo.js"></script>
   </body>

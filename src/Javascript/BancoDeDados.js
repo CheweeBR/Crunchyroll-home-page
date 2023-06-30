@@ -93,7 +93,9 @@ class BancoDeDados {
 
 function Cadastrar() {
   const bd = new BancoDeDados();
-  bd.Cadastrar();
+  if (checkTitulo() && checkDescrição() && checkLink()) {
+    bd.Cadastrar();
+  }
 }
 
 function Buscar() {
