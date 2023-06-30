@@ -15,7 +15,7 @@ class BancoDeDados {
     var anime = new Anime(nome, imagem, data, descricao);
     lista.push(anime);
     localStorage.setItem("Lista", JSON.stringify(lista));
-    alert("Anime cadastrado com sucesso!");
+    alert("Anime adicionado com sucesso!");
     console.log(lista.length);
     for (let c = 0; c < lista.length; c++) {
       console.log(lista[c]);

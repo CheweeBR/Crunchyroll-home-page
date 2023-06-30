@@ -57,6 +57,10 @@ body {
     .opçoes-left{
         max-width: 30%;
     }
+    #telaCadastro{
+        min-width: 50%;
+
+    }
 }
 
 @media(max-width: 450px){
@@ -88,12 +92,16 @@ body {
         max-width: 10%;
         max-height: 0%;
         margin-top:18%;
+        margin-right:10%;
+    }
+    #telaCadastro{
+        min-width: 70%;
+
     }
     
 }
 
 /* Telas com display: none */
-
 
 #telaBuscar {
     display: none;
@@ -124,6 +132,7 @@ body {
 #telaCadastro{
     display: none;
     position: absolute;
+    flex-direction:column;
     justify-content: center;
     align-items: center;
     color: white;
@@ -137,6 +146,10 @@ body {
 }
 .cadastrar{
     display: flex;
+    flex-direction:column;
+    margin-left: 15%;
+    flex-wrap:wrap;
+    width: 55%;
 }
 .input-cad{
     color: white;
@@ -145,6 +158,12 @@ body {
     border-color: aliceblue;
     width: 70%;
     margin: 5px;
+    border-radius: 15px;
+}
+#bt-cadastro{
+    color: white;
+    background-color:#23252b ;
+    border-color: aliceblue;
     border-radius: 15px;
 }
 /* Cabeçalho */
