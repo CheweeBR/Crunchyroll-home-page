@@ -87,7 +87,6 @@
         <input type="text" id="telaBuscarInput" onsend />
       </div>
       <div id="telaCadastro">
-        <title>Adicionar Anime</title>
         <h1 id="titulo_telaCadastro">Adicionar Anime</h1>
         <div class="cadastrar">
           Nome:<input id="nomeCad" class="input-cad" />
@@ -99,11 +98,19 @@
           Link da imagem: <input id="imagem" class="input-cad" />
           <br />
         </div>
-        <button id="bt-cadastro" onclick="Cadastrar()">Adicionar</button>
+        <div id="btlayout_telaCadastro">
+          <button id="bt-cadastro" onclick="Cadastrar()">Adicionar</button>
+          <br />
+          <button id="btfechar_telaCadastro" onclick="TelaCadastrar()">
+            Cancelar
+          </button>
+        </div>
       </div>
       <div id="telaLista">
-        <div class="result">
-          <h1>Resultado:</h1>
+        <button id="btfechar_telaLista" onclick="TelaLista()">x</button>
+        <div class="modal-telaLista">
+          <h1>Resultado</h1>
+          <div class="result"></div>
         </div>
       </div>
       <div class="centro-img">
@@ -111,26 +118,7 @@
           <img src="/src/images/Crunchyroll.jpg" class="Propaganda" />
         </div>
       </div>
-      <div class="centro-options">
-        <div style="order: 0" class="centro-titulo">
-          <p id="centro-options-text">One Piece</p>
-        </div>
-        <div style="order: 1" class="centro-titulo">
-          <p id="centro-options-text">Naruto</p>
-        </div>
-        <div style="order: 2" class="centro-titulo">
-          <p id="centro-options-text">Cowboy Bebop</p>
-        </div>
-        <div style="order: 3" class="centro-titulo">
-          <p id="centro-options-text">Spy × Family</p>
-        </div>
-        <div style="order: 4" class="centro-titulo">
-          <p id="centro-options-text">Akira</p>
-        </div>
-        <div style="order: 4" class="centro-titulo">
-          <p id="centro-options-text">Demon Slayer: Kimetsu no Yaiba</p>
-        </div>
-      </div>
+      <div class="centro-options"></div>
       <div class="Bottom">
         <div class="bottom-msg">
           <svg
@@ -153,6 +141,7 @@
     </div>
 
     <!-- TESTE JAVA SCRIPT -->
+    <button onclick="Deletar()"></button>
     <script src="/src/Javascript/teste.js"></script>
     <script src="/src/Javascript/Anime.js"></script>
     <script src="/src/Javascript/BancoDeDados.js"></script>

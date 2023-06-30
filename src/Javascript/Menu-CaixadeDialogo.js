@@ -25,9 +25,27 @@ function TelaLista() {
     mostrar.style.display = "flex";
   } else {
     mostrar.style.display = "none";
+    //Quando fechar a tela exibido anteriormente
+    var result = document.querySelector(".result");
+    result.innerHTML = "";
+    var div = document.createElement("div");
+    result.appendChild(div);
   }
 }
-
+function TelaExibirAnime(id) {
+  let lista = JSON.parse(localStorage.getItem("Lista"));
+  if (localStorage.Lista) {
+    const resultados = lista.filter((anime) => anime.id === id);
+    if (resultados.length > 0) {
+      console.log(`Resultados da busca por id "${id}":`);
+      resultados.forEach((anime) => {});
+    } else {
+      console.log(`Nenhum resultado encontrado para o id "${id}".`);
+    }
+  } else {
+    console.log("Nenhum anime cadastrado.");
+  }
+}
 /*function borrar() {
   let borrarCabecalho = document.querySelector(".cabeçalho-base");
   let borrarCentroImg = document.querySelector(".centro-img");

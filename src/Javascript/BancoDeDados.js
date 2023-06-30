@@ -12,7 +12,8 @@ class BancoDeDados {
     var descricao = document.getElementById("descricao").value;
     var data = document.getElementById("data").value;
     var imagem = document.getElementById("imagem").value;
-    var anime = new Anime(nome, imagem, data, descricao);
+    var id = lista.length;
+    var anime = new Anime(id, nome, imagem, data, descricao);
     lista.push(anime);
     localStorage.setItem("Lista", JSON.stringify(lista));
     alert("Anime adicionado com sucesso!");
@@ -20,6 +21,7 @@ class BancoDeDados {
     for (let c = 0; c < lista.length; c++) {
       console.log(lista[c]);
     }
+    TelaCadastrar();
   }
 
   Buscar(Nome) {
@@ -35,11 +37,29 @@ class BancoDeDados {
             .querySelector(".Propaganda")
             .setAttribute("src", anime.imagem);
           anime.imagem;
-          console.log(`Título: ${anime.nome}`);
-          console.log(`Descrição: ${anime.descricao}`);
-          console.log(`Data: ${anime.data}`);
-          console.log(`Imagem: ${anime.imagem}`);
-          console.log("---");
+          let apresentar = document.getElementById("telaLista");
+          apresentar.style.display = "flex";
+          //criação de pequenas telas dentro da div "result" para apresentar os itens pesquisados.
+          var result = document.querySelector(".result");
+          var div = document.createElement("div");
+          //Realizado criação de um botão para armazenar o objeto anime.
+          var botao = document.createElement("button");
+          botao.innerText = "Clique Aqui";
+          div.id = "Bloco_anime";
+          div.innerHTML = "Nome:" + anime.nome + "ID:" + anime.id;
+          div.style.display = "flex";
+          div.style.width = "20%";
+          div.style.height = "20%";
+          div.style.maxHeight = "100px";
+          div.style.flexDirection = "row";
+          div.style.backgroundColor = "red";
+          div.style.marginTop = "1%";
+          div.style.marginLeft = "1%";
+          div.appendChild(botao);
+          result.appendChild(div);
+          botao.addEventListener("click", function () {
+            TelaExibirAnime(anime.id);
+          });
         });
       } else {
         console.log(`Nenhum resultado encontrado para "${Nome}".`);
@@ -50,7 +70,7 @@ class BancoDeDados {
   }
 
   Deletar(Nome) {
-    if (localStorage.lista) {
+    if (localStorage.Lista !== null) {
       let lista = JSON.parse(localStorage.getItem("Lista"));
       let resultados = lista.filter((anime) =>
         anime.nome.toLowerCase().includes(Nome.toLowerCase())

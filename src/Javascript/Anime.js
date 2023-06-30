@@ -1,14 +1,22 @@
 class Anime {
+  id = 0;
   nome = "a";
   imagem = "a";
   data = "01/02/03";
   descricao = "aaaaaaaaaaaa";
 
-  constructor(nome, imagem, data, descricao) {
+  constructor(id, nome, imagem, data, descricao) {
+    this.id = id;
     this.nome = nome;
     this.imagem = imagem;
     this.data = data;
     this.descricao = descricao;
+  }
+  getId() {
+    return this.id;
+  }
+  setId(id) {
+    this.id = id;
   }
 
   getNome() {
