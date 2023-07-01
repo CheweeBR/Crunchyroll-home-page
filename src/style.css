@@ -398,11 +398,12 @@ body {
 #IdAnime{
     display:none;
 }
-#bt_alterarDeletar{
+.bt_alterarDeletar{
     display:none;
     width: 100%;
 }
 #Deletar{
+    display:none;
     color: white;
     background-color:#23252b ;
     border-color: aliceblue;
@@ -410,6 +411,7 @@ body {
     margin-right: 3%;
 }
 #Alterar{
+    display:none;
     color: white;
     background-color:#23252b ;
     border-color: aliceblue;

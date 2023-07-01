@@ -19,7 +19,7 @@ function TelaBuscar() {
     mostrar.style.display = "none";
   }
 }
-
+//Exibe lista com os resultados
 function TelaLista() {
   let mostrar = document.getElementById("telaLista");
   if (mostrar.style.display == "none") {
@@ -33,7 +33,7 @@ function TelaLista() {
     result.appendChild(div);
   }
 }
-
+//Exibe dados dos animes na tela principal
 function TelaExibirAnime(id) {
   let lista = JSON.parse(localStorage.getItem("Lista"));
   if (localStorage.Lista) {
@@ -41,7 +41,6 @@ function TelaExibirAnime(id) {
     if (resultados.length > 0) {
       resultados.forEach((anime) => {
         document.querySelector(".Propaganda").setAttribute("src", anime.imagem);
-        anime.imagem;
         document.querySelector("#tituloAnime").innerHTML = anime.nome;
         document.querySelector("#descriçãoAnime").innerHTML = anime.descricao;
         document.querySelector("#dataAnime").innerHTML = "Data: " + anime.data;
@@ -56,10 +55,23 @@ function TelaExibirAnime(id) {
   TelaLista();
   bt_alterarDeletar();
 }
+
+//Restaura a tela ao padrão
+function TelaInicial() {
+  document
+    .querySelector(".Propaganda")
+    .setAttribute("src", "/src/images/Crunchyroll.jpg");
+  document.querySelector("#tituloAnime").innerHTML = "";
+  document.querySelector("#descriçãoAnime").innerHTML = "";
+  document.querySelector("#dataAnime").innerHTML = "";
+  document.querySelector("#IdAnime").innerHTML = "";
+  bt_alterarDeletar();
+}
+
 //Exibe os botões de alterar e deletar
 function bt_alterarDeletar() {
-  let mostrar = document.getElementById("bt_alterarDeletar");
-  if (mostrar.style.display !== "none") {
+  let mostrar = document.querySelector(".bt_alterarDeletar");
+  if (mostrar.style.display == "none") {
     mostrar.style.display = "flex";
   } else {
     mostrar.style.display = "none";

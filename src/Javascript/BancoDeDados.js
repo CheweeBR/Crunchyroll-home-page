@@ -58,10 +58,10 @@ class BancoDeDados {
           });
         });
       } else {
-        console.log(`Nenhum resultado encontrado para "${Nome}".`);
+        alert(`Nenhum resultado encontrado para "${Nome}".`);
       }
     } else {
-      console.log("Nenhum anime cadastrado.");
+      alert("Nenhum anime cadastrado.");
     }
   }
 
@@ -69,9 +69,30 @@ class BancoDeDados {
     if (localStorage.getItem("Lista")) {
       let lista = JSON.parse(localStorage.getItem("Lista"));
       const resultados = lista.filter((anime) => anime.id === id);
-      if (resultados.length < 0) {
+      if (resultados.length > 0) {
         localStorage.setItem("Lista", JSON.stringify(lista));
         alert("Anime deletado com sucesso");
+      } else {
+        alert(`Nenhum anime encontrado com o ID "${id}".`);
+      }
+    } else {
+      alert("Nenhum anime cadastrado.");
+    }
+  }
+
+  Alterar(id) {
+    if (localStorage.Lista) {
+      let lista = JSON.parse(localStorage.getItem("Lista"));
+      const resultados = lista.filter((anime) => anime.id === id);
+      if (resultados.length > 0) {
+        var nome = document.getElementById("nomeCad").value;
+        var descricao = document.getElementById("descricao").value;
+        var data = document.getElementById("data").value;
+        var imagem = document.getElementById("imagem").value;
+        var anime = new Anime(id, nome, imagem, data, descricao);
+        lista[id] = anime;
+        localStorage.setItem("Lista", JSON.stringify(lista));
+        TelaCadastrar();
       } else {
         alert(`Nenhum anime encontrado com o ID "${id}".`);
       }
@@ -96,7 +117,12 @@ function Buscar() {
 
 function Deletar() {
   let id = document.querySelector("#IdAnime").innerHTML;
-  console.log("valor pego do id: " + id);
   const bd = new BancoDeDados();
   bd.Deletar(id);
+}
+
+function Alterar() {
+  let id = document.querySelector("#IdAnime").innerHTML;
+  const bd = new BancoDeDados();
+  bd.Alterar(id);
 }
