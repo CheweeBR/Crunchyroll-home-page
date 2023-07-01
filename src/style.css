@@ -381,9 +381,8 @@ body {
 .centro-titulo:hover{
     background-color:  #6d7079f0;
 }
-#Campo_descriçãoAnime {
-    background-color: #23252b;
-    width: 40%;
+#Campo_descriçãoAnimes {
+    width: 100%;
     justify-content: center;
 }
 #descriçãoAnime{
@@ -403,7 +402,7 @@ body {
     width: 100%;
 }
 #Deletar{
-    display:none;
+    display:flex;
     color: white;
     background-color:#23252b ;
     border-color: aliceblue;
@@ -411,7 +410,7 @@ body {
     margin-right: 3%;
 }
 #Alterar{
-    display:none;
+    display:flex;
     color: white;
     background-color:#23252b ;
     border-color: aliceblue;

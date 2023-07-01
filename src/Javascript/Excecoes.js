@@ -13,10 +13,9 @@ function checkTitulo() {
 function checkDescrição() {
   let valorAnime = document.querySelector("#descricao");
   let labelAnime = document.querySelector("#Txt_descricao_telaCadastro");
-  if (valorAnime.value.length < 1 || valorAnime.value.length > 250) {
+  if (valorAnime.value.length < 1) {
     labelAnime.setAttribute("style", "color: red");
-    labelAnime.innerHTML =
-      "*O campo descrição não pode estar vazio ou ultrapassar 250 caracteres.";
+    labelAnime.innerHTML = "*O campo descrição não pode estar vazio.";
     return false;
   }
   return true;

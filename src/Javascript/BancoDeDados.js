@@ -61,7 +61,7 @@ class BancoDeDados {
 
   Deletar(id) {
     if (localStorage.getItem("Lista")) {
-      let lista = JSON.parse(localStorage.getItem("Lista"));
+      let lista = JSON.parse(localStorage.getItem("Lista")) || [];
       const resultados = lista.filter((anime) => anime.id === id);
       if (resultados.length > 0) {
         localStorage.setItem("Lista", JSON.stringify(lista));

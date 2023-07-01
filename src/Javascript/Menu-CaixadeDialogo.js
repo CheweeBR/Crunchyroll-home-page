@@ -71,7 +71,7 @@ function TelaInicial() {
 //Exibe os botões de alterar e deletar
 function bt_alterarDeletar() {
   let mostrar = document.querySelector(".bt_alterarDeletar");
-  if (mostrar.style.display == "none") {
+  if (mostrar.style.display != "none") {
     mostrar.style.display = "flex";
   } else {
     mostrar.style.display = "none";
