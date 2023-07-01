@@ -1,13 +1,7 @@
 const lista = new Array();
 class BancoDeDados {
   Cadastrar() {
-    let lista;
-    if (localStorage.Lista !== null) {
-      lista = JSON.parse(localStorage.getItem("Lista"));
-    } else {
-      localStorage.setItem("Lista", JSON.stringify(lista));
-      lista = JSON.parse(localStorage.getItem("Lista"));
-    }
+    let lista = JSON.parse(localStorage.getItem("Lista")) || [];
     var nome = document.getElementById("nomeCad").value;
     var descricao = document.getElementById("descricao").value;
     var data = document.getElementById("data").value;
