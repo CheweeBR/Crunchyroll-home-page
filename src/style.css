@@ -381,23 +381,40 @@ body {
 .centro-titulo:hover{
     background-color:  #6d7079f0;
 }
-
-.Seta-direita {
-    height: 40px;
-    width: 40px;
-    transition: all 0.2s;
-}
-.Seta-direita:hover {
+#Campo_descriçãoAnime {
     background-color: #23252b;
+    width: 40%;
+    justify-content: center;
 }
-.Seta-esquerda{
-    height: 40px;
-    width: 40px;
-    transform: rotate(180deg);
-    transition: all 0.2s;
+#descriçãoAnime{
+    color: white;
 }
-.Seta-esquerda:hover {
-    background-color: #23252b;
+#tituloAnime{
+    color: white;
+}
+#dataAnime{
+    color: white;
+}
+#IdAnime{
+    display:none;
+}
+#bt_alterarDeletar{
+    display:none;
+    width: 100%;
+}
+#Deletar{
+    color: white;
+    background-color:#23252b ;
+    border-color: aliceblue;
+    border-radius: 15px;
+    margin-right: 3%;
+}
+#Alterar{
+    color: white;
+    background-color:#23252b ;
+    border-color: aliceblue;
+    border-radius: 15px;
+    margin-right: 3%;
 }
 .Seta-baixo{
     height: 45px;
@@ -414,7 +431,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #040404;
-    height: 100px;
+    height: 55px;
     width: 100%;
 }
 .bottom-msg {

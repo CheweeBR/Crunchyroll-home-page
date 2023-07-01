@@ -13,9 +13,10 @@ function checkTitulo() {
 function checkDescrição() {
   let valorAnime = document.querySelector("#descricao");
   let labelAnime = document.querySelector("#Txt_descricao_telaCadastro");
-  if (valorAnime.value.length < 1) {
+  if (valorAnime.value.length < 1 || valorAnime.value.length > 250) {
     labelAnime.setAttribute("style", "color: red");
-    labelAnime.innerHTML = "Descrição: O campo descrição não pode estar vazio.";
+    labelAnime.innerHTML =
+      "*O campo descrição não pode estar vazio ou ultrapassar 250 caracteres.";
     return false;
   }
   return true;
@@ -27,7 +28,7 @@ function checkLink() {
   if (!valorAnime.value.startsWith("http")) {
     labelAnime.style.color = "red";
     labelAnime.innerHTML =
-      "Link da imagem: O link deve obrigatoriamente começar com 'http'.";
+      "* O link deve obrigatoriamente começar com 'http...'.";
     return false;
   }
   return true;

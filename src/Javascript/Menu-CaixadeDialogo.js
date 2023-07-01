@@ -19,6 +19,7 @@ function TelaBuscar() {
     mostrar.style.display = "none";
   }
 }
+
 function TelaLista() {
   let mostrar = document.getElementById("telaLista");
   if (mostrar.style.display == "none") {
@@ -32,20 +33,39 @@ function TelaLista() {
     result.appendChild(div);
   }
 }
+
 function TelaExibirAnime(id) {
   let lista = JSON.parse(localStorage.getItem("Lista"));
   if (localStorage.Lista) {
     const resultados = lista.filter((anime) => anime.id === id);
     if (resultados.length > 0) {
-      console.log(`Resultados da busca por id "${id}":`);
-      resultados.forEach((anime) => {});
+      resultados.forEach((anime) => {
+        document.querySelector(".Propaganda").setAttribute("src", anime.imagem);
+        anime.imagem;
+        document.querySelector("#tituloAnime").innerHTML = anime.nome;
+        document.querySelector("#descriçãoAnime").innerHTML = anime.descricao;
+        document.querySelector("#dataAnime").innerHTML = "Data: " + anime.data;
+        document.querySelector("#IdAnime").innerHTML = anime.id;
+      });
     } else {
-      console.log(`Nenhum resultado encontrado para o id "${id}".`);
+      alert("Nenhum resultado encontrado para o id " + anime.id + ".");
     }
   } else {
     console.log("Nenhum anime cadastrado.");
   }
+  TelaLista();
+  bt_alterarDeletar();
 }
+//Exibe os botões de alterar e deletar
+function bt_alterarDeletar() {
+  let mostrar = document.getElementById("bt_alterarDeletar");
+  if (mostrar.style.display !== "none") {
+    mostrar.style.display = "flex";
+  } else {
+    mostrar.style.display = "none";
+  }
+}
+
 /*function borrar() {
   let borrarCabecalho = document.querySelector(".cabeçalho-base");
   let borrarCentroImg = document.querySelector(".centro-img");

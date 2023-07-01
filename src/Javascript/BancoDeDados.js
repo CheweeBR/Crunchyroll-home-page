@@ -33,10 +33,6 @@ class BancoDeDados {
       if (resultados.length > 0) {
         console.log(`Resultados da busca para "${Nome}":`);
         resultados.forEach((anime) => {
-          document
-            .querySelector(".Propaganda")
-            .setAttribute("src", anime.imagem);
-          anime.imagem;
           let apresentar = document.getElementById("telaLista");
           apresentar.style.display = "flex";
           //criação de pequenas telas dentro da div "result" para apresentar os itens pesquisados.
@@ -46,13 +42,13 @@ class BancoDeDados {
           var botao = document.createElement("button");
           botao.innerText = "Clique Aqui";
           div.id = "Bloco_anime";
-          div.innerHTML = "Nome:" + anime.nome + "ID:" + anime.id;
+          div.innerHTML = "Nome:" + anime.nome;
           div.style.display = "flex";
           div.style.width = "20%";
           div.style.height = "20%";
           div.style.maxHeight = "100px";
-          div.style.flexDirection = "row";
-          div.style.backgroundColor = "red";
+          div.style.flexDirection = "column";
+          div.style.border = "1px solid white";
           div.style.marginTop = "1%";
           div.style.marginLeft = "1%";
           div.appendChild(botao);
@@ -69,24 +65,18 @@ class BancoDeDados {
     }
   }
 
-  Deletar(Nome) {
-    if (localStorage.Lista !== null) {
+  Deletar(id) {
+    if (localStorage.getItem("Lista")) {
       let lista = JSON.parse(localStorage.getItem("Lista"));
-      let resultados = lista.filter((anime) =>
-        anime.nome.toLowerCase().includes(Nome.toLowerCase())
-      );
-
-      if (resultados.length > 0) {
-        lista = lista.filter(
-          (anime) => !anime.nome.toLowerCase().includes(Nome.toLowerCase())
-        );
+      const resultados = lista.filter((anime) => anime.id === id);
+      if (resultados.length < 0) {
         localStorage.setItem("Lista", JSON.stringify(lista));
-        console.log(`O anime "${Nome}" foi deletado com sucesso.`);
+        alert("Anime deletado com sucesso");
       } else {
-        console.log(`Nenhum anime encontrado com o nome "${Nome}".`);
+        alert(`Nenhum anime encontrado com o ID "${id}".`);
       }
     } else {
-      console.log("Nenhum anime cadastrado.");
+      alert("Nenhum anime cadastrado.");
     }
   }
 }
@@ -105,7 +95,8 @@ function Buscar() {
 }
 
 function Deletar() {
-  let Nome = document.getElementById("telaBuscarInput").value;
+  let id = document.querySelector("#IdAnime").innerHTML;
+  console.log("valor pego do id: " + id);
   const bd = new BancoDeDados();
-  bd.Deletar(Nome);
+  bd.Deletar(id);
 }
