@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="/src/style.css" >
     <title>Crunchyroll</title>
   </head>
   <body>
@@ -13,12 +13,7 @@
         <div class="cabeçalho-logo" onclick="TelaInicial()">
           <svg
             class="icone-crunch"
-            xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 136 24"
-            data-t="crunchyroll-horizontal-svg"
-            aria-labelledby="crunchyroll-horizontal-svg"
-            aria-hidden="false"
-            role="img"
           >
             <title id="logo">Logo da Crunchyroll</title>
             <path
@@ -31,12 +26,7 @@
             <p>Navegar&nbsp;</p>
             <svg
               class="Seta-baixo"
-              xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              data-t="dropdown-svg"
-              aria-labelledby="dropdown-svg"
-              aria-hidden="true"
-              role="img"
             >
               <title id="dropdown-svg">Menu Navegar</title>
               <path d="M7 10h10l-5 5z"></path>
@@ -51,12 +41,7 @@
           <div class="opçoes-right" onclick="TelaBuscar()">
             <svg
               class="Icones-right"
-              xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              data-t="search-svg"
-              aria-labelledby="search-svg"
-              aria-hidden="false"
-              role="img"
             >
               <title id="buscar">Buscar</title>
               <path
@@ -67,12 +52,7 @@
           <div class="opçoes-right">
             <svg
               class="Icones-right"
-              xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              data-t="user-settings-svg"
-              aria-labelledby="user-settings-svg"
-              aria-hidden="true"
-              role="img"
             >
               <title id="Configuração-da-conta">Menu da conta</title>
               <path
@@ -84,27 +64,22 @@
       </nav>
       <div id="telaBuscar">
         <button id="bt-buscar" onclick="Buscar()">Buscar</button>
-        <input type="text" id="telaBuscarInput" onsend />
+        <input type="text" id="telaBuscarInput">
       </div>
       <div id="telaCadastro">
         <h1 id="titulo_telaCadastro">Adicionar Anime</h1>
         <div class="cadastrar">
           <label id="Txt_Nome_telaCadastro">Nome:</label>
-          <input id="nomeCad" class="input-cad" />
-          <br />
+          <input id="nomeCad" class="input-cad">
           <label id="Txt_descricao_telaCadastro"></label>
-          Descrição:<input id="descricao" class="input-cad" />
-          <br />
+          Descrição:<input id="descricao" class="input-cad">
           <label id="Txt_data_telaCadastro"></label>
-          Data:<input type="date" id="data" class="input-cad" />
-          <br />
+          Data:<input type="date" id="data" class="input-cad">
           <label id="Txt_link_telaCadastro"></label>
-          Link da imagem: <input id="imagem" class="input-cad" />
-          <br />
+          Link da imagem: <input id="imagem" class="input-cad">
         </div>
         <div id="btlayout_telaCadastro">
           <button id="bt-cadastro" onclick="Cadastrar()">Adicionar</button>
-          <br />
           <button id="btfechar_telaCadastro" onclick="TelaCadastrar()">
             Cancelar
           </button>
@@ -117,16 +92,15 @@
           <div class="result"></div>
         </div>
       </div>
-
       <div class="centro-img">
         <div class="centro-propaganda">
-          <img src="/src/images/Crunchyroll.jpg" class="Propaganda" />
+          <img src="/src/images/Crunchyroll.jpg" class="Propaganda" alt="Imagem Central" >
         </div>
       </div>
       <div id="Campo_descriçãoAnimes">
-        <h1 id="tituloAnime"></h1>
+        <h1 id="tituloAnime"> Crunchyroll </h1>
         <p id="descriçãoAnime"></p>
-        <h3 id="dataAnime"></h3>
+        <h3 id="dataAnime"> Esse sistema tem a funcionalidade de cadastrar e consultar animes. </h3>
         <p id="IdAnime"></p>
       </div>
       <div class="bt_alterarDeletar">
@@ -138,12 +112,7 @@
         <div class="bottom-msg">
           <svg
             class="icone-exclamação"
-            xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
-            data-t="alert-svg"
-            aria-labelledby="alert-svg"
-            aria-hidden="true"
-            role="img"
           >
             <title id="alerta">Alerta</title>
             <path
