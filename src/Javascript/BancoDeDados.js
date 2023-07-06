@@ -38,8 +38,8 @@ class BancoDeDados {
           div.id = "Bloco_anime";
           div.innerHTML = "Nome:" + anime.nome;
           div.style.display = "flex";
-          div.style.width = "20%";
-          div.style.height = "20%";
+          div.style.width = "25%";
+          div.style.height = "25%";
           div.style.maxHeight = "100px";
           div.style.borderRadius = "5px";
           div.style.flexDirection = "column";
