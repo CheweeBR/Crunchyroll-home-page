@@ -62,6 +62,7 @@ class BancoDeDados {
       let lista = JSON.parse(localStorage.getItem("Lista")) || [];
       const resultados = lista.filter((anime) => anime.id == id);
       if (resultados.length > 0) {
+        lista.splice(id,1);
         localStorage.setItem("Lista", JSON.stringify(lista));
         alert("Anime deletado com sucesso");
       } else {
@@ -74,7 +75,6 @@ class BancoDeDados {
       let lista = JSON.parse(localStorage.getItem("Lista"));
       const resultados = lista.filter((anime) => anime.id == id);
       if (resultados.length > 0) {
-        TelaCadastrar();
         var nome = document.getElementById("nomeCad").value;
         var descricao = document.getElementById("descricao").value;
         var data = document.getElementById("data").value;
@@ -85,6 +85,7 @@ class BancoDeDados {
       } else {
         alert(`Nenhum anime encontrado com o ID "${id}".`);
       }
+      TelaAlterar();
     } 
 }
 

@@ -85,6 +85,25 @@
           </button>
         </div>
       </div>
+      <div id="telaAlterar">
+        <h1 id="titulo_telaCadastro">Alterar Anime</h1>
+        <div class="cadastrar">
+          <label id="Txt_Nome_telaCadastro">Nome:</label>
+          <input id="nomeCad" class="input-cad">
+          <label id="Txt_descricao_telaCadastro"></label>
+          Descrição:<input id="descricao" class="input-cad">
+          <label id="Txt_data_telaCadastro"></label>
+          Data:<input type="date" id="data" class="input-cad">
+          <label id="Txt_link_telaCadastro"></label>
+          Link da imagem: <input id="imagem" class="input-cad">
+        </div>
+        <div id="btlayout_telaCadastro">
+          <button id="bt-cadastro" onclick="Alterar()">Alterar</button>
+          <button id="btfechar_telaAltera" onclick="TelaAlterar()">
+            Cancelar
+          </button>
+        </div>
+      </div>
       <div id="telaLista">
         <button id="btfechar_telaLista" onclick="TelaLista()">x</button>
         <div class="modal-telaLista">
@@ -105,7 +124,7 @@
       </div>
       <div class="bt_alterarDeletar">
         <button id="Deletar" onclick="Deletar()">Deletar</button>
-        <button id="Alterar" onclick="Alterar()">Alterar</button>
+        <button id="Alterar" onclick="TelaAlterar()">Alterar</button>
       </div>
       <div class="centro-options"></div>
       <div class="Bottom">
@@ -124,7 +143,7 @@
       </div>
     </div>
 
-    <!-- TESTE JAVA SCRIPT -->
+
     <script src="/src/Javascript/Anime.js"></script>
     <script src="/src/Javascript/Excecoes.js"></script>
     <script src="/src/Javascript/BancoDeDados.js"></script>

@@ -11,6 +11,18 @@ function TelaCadastrar() {
     sumirPropaganda.style.display = "flex";
   }
 }
+
+function TelaAlterar() {
+  let mostrar = document.getElementById("telaAlterar");
+  let sumirBuscar = document.getElementById("telaBuscar");
+  if (mostrar.style.display == "none") {
+    mostrar.style.display = "flex";
+    sumirBuscar.style.display = "none";
+  } else {
+    mostrar.style.display = "none";
+  }
+}
+
 function TelaBuscar() {
   let mostrar = document.getElementById("telaBuscar");
   let mostrarcad = document.getElementById("telaCadastro");
