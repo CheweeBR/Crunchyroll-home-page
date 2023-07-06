@@ -11,16 +11,13 @@ class BancoDeDados {
     lista.push(anime);
     localStorage.setItem("Lista", JSON.stringify(lista));
     alert("Anime adicionado com sucesso!");
-    console.log(lista.length);
-    for (let c = 0; c < lista.length; c++) {
-      console.log(lista[c]);
-    }
     TelaCadastrar();
   }
 
   Buscar(Nome) {
-    let lista = JSON.parse(localStorage.getItem("Lista"));
+
     if (localStorage.Lista) {
+      let lista = JSON.parse(localStorage.getItem("Lista"));
       const resultados = lista.filter((anime) =>
         anime.nome.toLowerCase().includes(Nome.toLowerCase())
       );
@@ -63,23 +60,21 @@ class BancoDeDados {
   Deletar(id) {
     if (localStorage.getItem("Lista")) {
       let lista = JSON.parse(localStorage.getItem("Lista")) || [];
-      const resultados = lista.filter((anime) => anime.id === id);
+      const resultados = lista.filter((anime) => anime.id == id);
       if (resultados.length > 0) {
         localStorage.setItem("Lista", JSON.stringify(lista));
         alert("Anime deletado com sucesso");
       } else {
         alert(`Nenhum anime encontrado com o ID "${id}".`);
       }
-    } else {
-      alert("Nenhum anime cadastrado.");
-    }
+    } 
   }
 
   Alterar(id) {
-    if (localStorage.Lista) {
       let lista = JSON.parse(localStorage.getItem("Lista"));
-      const resultados = lista.filter((anime) => anime.id === id);
+      const resultados = lista.filter((anime) => anime.id == id);
       if (resultados.length > 0) {
+        TelaCadastrar();
         var nome = document.getElementById("nomeCad").value;
         var descricao = document.getElementById("descricao").value;
         var data = document.getElementById("data").value;
@@ -87,14 +82,10 @@ class BancoDeDados {
         var anime = new Anime(id, nome, imagem, data, descricao);
         lista[id] = anime;
         localStorage.setItem("Lista", JSON.stringify(lista));
-        TelaCadastrar();
       } else {
         alert(`Nenhum anime encontrado com o ID "${id}".`);
       }
-    } else {
-      alert("Nenhum anime cadastrado.");
-    }
-  }
+    } 
 }
 
 function Cadastrar() {
