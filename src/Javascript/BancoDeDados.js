@@ -34,13 +34,14 @@ class BancoDeDados {
           var div = document.createElement("div");
           //Realizado criação de um botão para armazenar o objeto anime.
           var botao = document.createElement("button");
-          botao.innerText = "Clique Aqui";
+          botao.innerText = "Consultar";
           div.id = "Bloco_anime";
           div.innerHTML = "Nome:" + anime.nome;
           div.style.display = "flex";
           div.style.width = "20%";
           div.style.height = "20%";
           div.style.maxHeight = "100px";
+          div.style.borderRadius = "5px";
           div.style.flexDirection = "column";
           div.style.border = "1px solid white";
           div.style.marginTop = "1%";

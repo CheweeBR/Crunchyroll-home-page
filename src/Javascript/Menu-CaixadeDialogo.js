@@ -13,9 +13,12 @@ function TelaCadastrar() {
 }
 function TelaBuscar() {
   let mostrar = document.getElementById("telaBuscar");
+  let mostrarcad = document.getElementById("telaCadastro");
+  let sumirPropaganda = document.querySelector(".Propaganda");
   if (mostrar.style.display == "none") {
-    TelaCadastrar();
     mostrar.style.display = "flex";
+    sumirPropaganda.style.display = "flex";
+    mostrarcad.style.display = "none";
   } else {
     mostrar.style.display = "none";
   }
