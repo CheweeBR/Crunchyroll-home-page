@@ -245,6 +245,27 @@ body {
     align-items: center;
     flex-direction:row;
 }
+#bt-telaAltera{
+    color: white;
+    background-color:#23252b ;
+    border-color: aliceblue;
+    border-radius: 15px;
+    margin-right: 5%;
+}
+#btfechar_telaAltera{
+    display: flex;
+    color: white;
+    background-color:#23252b ;
+    border-color: aliceblue;
+    border-radius: 15px;
+    margin-left: 5%;
+}
+#btlayout_telaAlt{
+    display: flex;
+    align-items: center;
+    flex-direction:row;
+}
+
 /* Cabeçalho */
 
 .cabeçalho-base {
