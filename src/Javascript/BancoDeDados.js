@@ -84,6 +84,7 @@ class BancoDeDados {
       lista[id].data = document.getElementById("dataAlt").value;
       lista[id].imagem = document.getElementById("imagemAlt").value;
       localStorage.setItem("Lista", JSON.stringify(lista));
+      alert("Anime alterado com sucesso!");
       TelaInicial();
     } else {
       alert(`Nenhum anime encontrado com o ID "${id}".`);
