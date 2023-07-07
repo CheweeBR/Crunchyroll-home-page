@@ -209,6 +209,13 @@ body {
     flex-wrap:wrap;
     width: 55%;
 }
+.altera {
+    display: flex;
+    flex-direction:column;
+    margin-left: 15%;
+    flex-wrap:wrap;
+    width: 55%;
+}
 .input-cad{
     color: white;
     display: flex;

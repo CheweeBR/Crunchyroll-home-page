@@ -79,10 +79,10 @@ class BancoDeDados {
     let lista = JSON.parse(localStorage.getItem("Lista"));
     const resultados = lista.filter((anime) => anime.id == id);
     if (resultados.length > 0) {
-      lista[id].nome = document.getElementById("nomeCad").value;
-      lista[id].descricao = document.getElementById("descricao").value;
-      lista[id].data = document.getElementById("data").value;
-      lista[id].imagem = document.getElementById("imagem").value;
+      lista[id].nome = document.getElementById("nomeAlt").value;
+      lista[id].descricao = document.getElementById("descricaoAlt").value;
+      lista[id].data = document.getElementById("dataAlt").value;
+      lista[id].imagem = document.getElementById("imagemAlt").value;
       localStorage.setItem("Lista", JSON.stringify(lista));
       TelaInicial();
     } else {
