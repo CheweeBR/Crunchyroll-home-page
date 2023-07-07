@@ -15,7 +15,6 @@ class BancoDeDados {
   }
 
   Buscar(Nome) {
-
     if (localStorage.Lista) {
       let lista = JSON.parse(localStorage.getItem("Lista"));
       const resultados = lista.filter((anime) =>
@@ -59,34 +58,38 @@ class BancoDeDados {
 
   Deletar(id) {
     if (localStorage.getItem("Lista")) {
+      let c;
       let lista = JSON.parse(localStorage.getItem("Lista")) || [];
       const resultados = lista.filter((anime) => anime.id == id);
       if (resultados.length > 0) {
-        lista.splice(id,1);
+        lista.splice(id, 1);
+        for (c = 0; c < lista.length; c++) {
+          lista[c].id = c;
+        }
         localStorage.setItem("Lista", JSON.stringify(lista));
         alert("Anime deletado com sucesso");
-      } else {
-        alert(`Nenhum anime encontrado com o ID "${id}".`);
       }
-    } 
+      TelaInicial();
+      bt_alterarDeletar();
+      TelaBuscar();
+    }
   }
 
   Alterar(id) {
-      let lista = JSON.parse(localStorage.getItem("Lista"));
-      const resultados = lista.filter((anime) => anime.id == id);
-      if (resultados.length > 0) {
-        var nome = document.getElementById("nomeCad").value;
-        var descricao = document.getElementById("descricao").value;
-        var data = document.getElementById("data").value;
-        var imagem = document.getElementById("imagem").value;
-        var anime = new Anime(id, nome, imagem, data, descricao);
-        lista[id] = anime;
-        localStorage.setItem("Lista", JSON.stringify(lista));
-      } else {
-        alert(`Nenhum anime encontrado com o ID "${id}".`);
-      }
-      TelaAlterar();
-    } 
+    let lista = JSON.parse(localStorage.getItem("Lista"));
+    const resultados = lista.filter((anime) => anime.id == id);
+    if (resultados.length > 0) {
+      lista[id].nome = document.getElementById("nomeCad").value;
+      lista[id].descricao = document.getElementById("descricao").value;
+      lista[id].data = document.getElementById("data").value;
+      lista[id].imagem = document.getElementById("imagem").value;
+      localStorage.setItem("Lista", JSON.stringify(lista));
+      TelaInicial();
+    } else {
+      alert(`Nenhum anime encontrado com o ID "${id}".`);
+    }
+    TelaAlterar();
+  }
 }
 
 function Cadastrar() {
