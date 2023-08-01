@@ -15,12 +15,24 @@ function TelaCadastrar() {
 function TelaAlterar() {
   let mostrar = document.getElementById("telaAlterar");
   let sumirBuscar = document.getElementById("telaBuscar");
+  CopiarDadosAlterar();
   if (mostrar.style.display == "none") {
     mostrar.style.display = "flex";
     sumirBuscar.style.display = "none";
   } else {
     mostrar.style.display = "none";
   }
+}
+
+function CopiarDadosAlterar(){
+  var nome = document.getElementById("tituloAnime").innerHTML;
+  var descricao = document.getElementById("descriçãoAnime").innerHTML;
+  var data = document.getElementById("dataAnime");
+  var img = document.querySelector(".Propaganda").getAttribute("src").innerHTMLa;
+  document.querySelector("#nomeAlt").value = nome;
+  document.querySelector("#descricaoAlt").value = descricao;
+  //document.querySelector("#dataAlt").value = data;
+  document.querySelector("#imagemAlt").value = img;
 }
 
 function TelaBuscar() {
