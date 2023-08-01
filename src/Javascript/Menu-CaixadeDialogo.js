@@ -15,10 +15,10 @@ function TelaCadastrar() {
 function TelaAlterar() {
   let mostrar = document.getElementById("telaAlterar");
   let sumirBuscar = document.getElementById("telaBuscar");
-  CopiarDadosAlterar();
   if (mostrar.style.display == "none") {
     mostrar.style.display = "flex";
     sumirBuscar.style.display = "none";
+    CopiarDadosAlterar();
   } else {
     mostrar.style.display = "none";
   }
@@ -27,11 +27,11 @@ function TelaAlterar() {
 function CopiarDadosAlterar(){
   var nome = document.getElementById("tituloAnime").innerHTML;
   var descricao = document.getElementById("descriçãoAnime").innerHTML;
-  var data = document.getElementById("dataAnime");
-  var img = document.querySelector(".Propaganda").getAttribute("src").innerHTMLa;
+  var data = document.getElementById("dataAnime").getAttribute("type");
+  var img = document.querySelector(".Propaganda").getAttribute("src");
   document.querySelector("#nomeAlt").value = nome;
   document.querySelector("#descricaoAlt").value = descricao;
-  //document.querySelector("#dataAlt").value = data;
+  document.querySelector("#dataAlt").value = data;
   document.querySelector("#imagemAlt").value = img;
 }
 

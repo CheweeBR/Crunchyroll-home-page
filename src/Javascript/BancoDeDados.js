@@ -114,7 +114,6 @@ function Deletar() {
 
 function Alterar() {
   let id = document.querySelector("#IdAnime").innerHTML;
-  CopiarDadosAlterar();
   const bd = new BancoDeDados();
   bd.Alterar(id);
 }
