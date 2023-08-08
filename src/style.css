@@ -121,6 +121,13 @@ body {
     border-radius: 15px;
     margin-right: 5%;
 }
+#bt-buscar-fechar{
+    color: white;
+    background-color:#23252b ;
+    border-color: aliceblue;
+    border-radius: 15px;
+    margin-left: 5%;
+}
 #telaBuscarInput{
     color: white;
     background-color:#23252b ;
@@ -305,7 +312,6 @@ body {
     justify-content: left;
     align-items: center;
     flex-direction: row;
-
     width: 20%;
   }
 .opçoes-right{
