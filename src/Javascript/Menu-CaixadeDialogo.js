@@ -3,6 +3,14 @@ document.getElementById('telaBuscar').addEventListener('submit', function(evt){
   evt.preventDefault();
 })
 
+document.getElementById('telaBuscar').addEventListener('focusout', function(){
+  var buscar = document.getElementById("bt-buscar");
+  if(buscar == 0) {
+    Buscar();
+  }
+  TelaBuscar();
+})
+
 function TelaCadastrar() {
   let mostrar = document.getElementById("telaCadastro");
   let sumirPropaganda = document.querySelector(".Propaganda");
@@ -12,6 +20,8 @@ function TelaCadastrar() {
     sumirPropaganda.style.display = "none";
     sumirBuscar.style.display = "none";
   } else {
+    var limpar = document.getElementById("telaBuscarInput").value;
+    limpar.innerHTML = "";
     mostrar.style.display = "none";
     sumirPropaganda.style.display = "flex";
   }
@@ -47,19 +57,20 @@ function TelaBuscar() {
   let mostrarCab = document.querySelector(".cabeçalho-right");
   let sumirPropaganda = document.querySelector(".Propaganda");
   if (mostrar.style.display == "none") {
-    FocusEvent
     mostrar.style.display = "flex";
     sumirPropaganda.style.display = "flex";
     mostrarcad.style.display = "none";
     mostrarIcones.style.visibility = "hidden";
     mostrarCab.style.visibility = "hidden";
+    let campoInput = document.getElementById("telaBuscarInput");
+    campoInput.focus();
   } else {
     mostrar.style.display = "none";
     mostrarIcones.style.visibility = "visible";
     mostrarCab.style.visibility = "visible";
-
   }
 }
+
 //Exibe lista com os resultados
 function TelaLista() {
   let mostrar = document.getElementById("telaLista");
@@ -86,6 +97,7 @@ function TelaExibirAnime(id) {
         document.querySelector("#descriçãoAnime").innerHTML = anime.descricao;
         document.querySelector("#dataAnime").innerHTML = "Data: " + anime.data;
         document.querySelector("#IdAnime").innerHTML = anime.id;
+        Mostrar_bt_alterarDeletar();
       });
     } else {
       alert("Nenhum resultado encontrado para o id " + anime.id + ".");
@@ -94,7 +106,6 @@ function TelaExibirAnime(id) {
     console.log("Nenhum anime cadastrado.");
   }
   TelaLista();
-  bt_alterarDeletar();
 }
 
 //Restaura a tela ao padrão
@@ -106,15 +117,16 @@ function TelaInicial() {
   document.querySelector("#descriçãoAnime").innerHTML = "";
   document.querySelector("#dataAnime").innerHTML = "";
   document.querySelector("#IdAnime").innerHTML = "";
-  bt_alterarDeletar();
+  Ocultar_bt_alterarDeletar();
 }
 
 //Exibe os botões de alterar e deletar
-function bt_alterarDeletar() {
+function Mostrar_bt_alterarDeletar() {
   let mostrar = document.querySelector(".bt_alterarDeletar");
-  if (mostrar.style.display != "none") {
-    mostrar.style.display = "flex";
-  } else {
-    mostrar.style.display = "none";
-  }
+  mostrar.style.display = "flex";
+}
+
+function Ocultar_bt_alterarDeletar() {  
+let mostrar = document.querySelector(".bt_alterarDeletar");
+mostrar.style.display = "none";
 }
