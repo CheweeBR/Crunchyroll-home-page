@@ -16,6 +16,7 @@ function TelaCadastrar() {
   let sumirPropaganda = document.querySelector(".Propaganda");
   let sumirBuscar = document.getElementById("telaBuscar");
   if (mostrar.style.display == "none") {
+    LimparCamposCad();
     mostrar.style.display = "flex";
     sumirPropaganda.style.display = "none";
     sumirBuscar.style.display = "none";
@@ -25,6 +26,13 @@ function TelaCadastrar() {
     mostrar.style.display = "none";
     sumirPropaganda.style.display = "flex";
   }
+}
+
+function LimparCamposCad(){
+  document.querySelector("#nomeCad").value = "";
+  document.querySelector("#descricao").value = "";
+  document.querySelector("#data").value = "";
+  document.querySelector("#imagem").value = "";
 }
 
 function TelaAlterar() {
@@ -72,19 +80,23 @@ function TelaBuscar() {
 }
 
 //Exibe lista com os resultados
-function TelaLista() {
+function Exibir_TelaLista() {
   let mostrar = document.getElementById("telaLista");
-  if (mostrar.style.display == "none") {
-    mostrar.style.display = "flex";
-  } else {
-    mostrar.style.display = "none";
-    //Quando fechar a tela exibido anteriormente
-    var result = document.querySelector(".result");
-    result.innerHTML = "";
-    var div = document.createElement("div");
-    result.appendChild(div);
-  }
+  mostrar.style.display = "flex";
 }
+
+function Ocultar_TelaLista() {
+  let mostrar = document.getElementById("telaLista");
+  mostrar.style.display = "none";
+  var result = document.querySelector(".result");
+  result.innerHTML = "";
+  var div = document.createElement("div");
+  result.appendChild(div);
+}
+
+
+
+
 //Exibe dados dos animes na tela principal
 function TelaExibirAnime(id) {
   let lista = JSON.parse(localStorage.getItem("Lista"));
@@ -105,19 +117,18 @@ function TelaExibirAnime(id) {
   } else {
     console.log("Nenhum anime cadastrado.");
   }
-  TelaLista();
+  Ocultar_TelaLista();
 }
 
 //Restaura a tela ao padrão
 function TelaInicial() {
-  document
-    .querySelector(".Propaganda")
-    .setAttribute("src", "/src/images/Crunchyroll.jpg");
-  document.querySelector("#tituloAnime").innerHTML = "";
+  document.querySelector(".Propaganda").setAttribute("src", "/src/images/Crunchyroll.jpg");
+  document.querySelector("#tituloAnime").innerHTML = "Crunchyroll";
   document.querySelector("#descriçãoAnime").innerHTML = "";
-  document.querySelector("#dataAnime").innerHTML = "";
+  document.querySelector("#dataAnime").innerHTML = "Esse sistema tem a funcionalidade de cadastrar e consultar animes.";
   document.querySelector("#IdAnime").innerHTML = "";
   Ocultar_bt_alterarDeletar();
+  Ocultar_TelaLista();
 }
 
 //Exibe os botões de alterar e deletar
