@@ -1,3 +1,4 @@
+// Evitar a reinicialização da página ao realizar o submit da função busca
 document.getElementById('telaBuscar').addEventListener('submit', function(evt){
   evt.preventDefault();
 })
@@ -43,9 +44,6 @@ function TelaBuscar() {
   let mostrar = document.getElementById("telaBuscar");
   let mostrarcad = document.getElementById("telaCadastro");
   let mostrarIcones = document.querySelector(".Icones-right");
-  let mostrarBtCad = document.getElementById("#Mais_opcoes");
-  let mostrarBtPes = document.getElementById("#buscar");
-  let mostrarBtConfig = document.getElementById("#Configuração-da-conta");
   let mostrarCab = document.querySelector(".cabeçalho-right");
   let sumirPropaganda = document.querySelector(".Propaganda");
   if (mostrar.style.display == "none") {
@@ -55,18 +53,10 @@ function TelaBuscar() {
     mostrarcad.style.display = "none";
     mostrarIcones.style.visibility = "hidden";
     mostrarCab.style.visibility = "hidden";
-    mostrarBtConfig.style.visibility = "hidden";
-    mostrarBtPes.style.visibility = "hidden";
-    mostrarcad.style.visibility = "hidden";
-    mostrarBtCad.style.visibility = "hidden";
   } else {
     mostrar.style.display = "none";
     mostrarIcones.style.visibility = "visible";
     mostrarCab.style.visibility = "visible";
-    mostrarBtConfig.style.visibility = "visible";
-    mostrarBtPes.style.visibility = "visible";
-    mostrarcad.style.visibility = "visible";
-    mostrarBtCad.style.visibility = "visible";
 
   }
 }
