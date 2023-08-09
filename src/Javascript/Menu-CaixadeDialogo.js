@@ -1,3 +1,7 @@
+document.getElementById('telaBuscar').addEventListener('submit', function(evt){
+  evt.preventDefault();
+})
+
 function TelaCadastrar() {
   let mostrar = document.getElementById("telaCadastro");
   let sumirPropaganda = document.querySelector(".Propaganda");
@@ -45,6 +49,7 @@ function TelaBuscar() {
   let mostrarCab = document.querySelector(".cabeçalho-right");
   let sumirPropaganda = document.querySelector(".Propaganda");
   if (mostrar.style.display == "none") {
+    FocusEvent
     mostrar.style.display = "flex";
     sumirPropaganda.style.display = "flex";
     mostrarcad.style.display = "none";

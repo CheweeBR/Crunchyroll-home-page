@@ -50,11 +50,11 @@
           </div>
         </div>
       </nav>
-      <div id="telaBuscar">
-        <button id="bt-buscar" onclick="Buscar()">Buscar</button>
-        <input type="text" id="telaBuscarInput" >
-        <button id="bt-buscar-fechar" onclick="TelaBuscar()">X</button>
-      </div>
+      <form id="telaBuscar" onsubmit="Buscar()">
+        <button type="button" id="bt-buscar-fechar" onclick="TelaBuscar()">X</button>
+        <input type="search" id="telaBuscarInput" >
+        <input type="submit" id="bt-buscar" onclick="Buscar()"></input>
+      </form>
       <div id="telaCadastro">
         <h1 id="titulo_telaCadastro">Adicionar Anime</h1>
         <div class="cadastrar">
