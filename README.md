@@ -12,6 +12,10 @@
 <li>Exceções: Classe Excecoes.js responsável por tratar exceções e validar dados inseridos na função Cadastrar e Alterar</li>
 </div>
 
-#### Projeto designado pela disciplina de Desenvolvimento Web FrontEnd cursado em 2023/01.
+### Tecnologias 🔧
+
+
+
+#### Projeto designado pela disciplina de Desenvolvimento Web FrontEnd cursada em 2023/01.
 
 ### Deploy: https://celadon-sorbet-ff11ef.netlify.app/
