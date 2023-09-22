@@ -4,7 +4,7 @@
 
 #### Esse site tem como inspiração a replicação da página inicial do site https://www.crunchyroll.com/ utilizando apenas técnicas de Front End sem conexão com banco de dados, o armazenamento é realizado com a API LocalStorage.
 
-### Requisitos Funcionais -->
+### Requisitos Funcionais 📋
 
 <div>
 <li>CRUD: Realizado com API LocalStorage e encapsulado na classe BancoDeDados.js</li>
