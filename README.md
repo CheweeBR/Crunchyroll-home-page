@@ -1,6 +1,6 @@
 ## Página inicial do Crunchyroll
 
-### Objetivos -->
+### Objetivos ❕❗
 
 #### Esse site tem como inspiração a replicação da página inicial do site https://www.crunchyroll.com/ utilizando apenas técnicas de Front End sem conexão com banco de dados, o armazenamento é realizado com a API LocalStorage.
 
@@ -12,7 +12,7 @@
 <li>Exceções: Classe Excecoes.js responsável por tratar exceções e validar dados inseridos na função Cadastrar e Alterar</li>
 </div>
 
-### Tecnologias 🔧
+### Tecnologias 🛠️
 
 <div style="display: inline_block">
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
