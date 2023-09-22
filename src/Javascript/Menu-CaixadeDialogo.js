@@ -7,10 +7,12 @@ function TelaCadastrar() {
   let sumirBuscar = document.getElementById("telaBuscar");
   if (mostrar.style.display == "none") {
     limparCadastro();
+    Exibir_Desfoque_Fundo();
     mostrar.style.display = "flex";
     sumirPropaganda.style.display = "none";
     sumirBuscar.style.display = "none";
   } else {
+    Ocultar_Desfoque_Fundo();
     var limpar = document.getElementById("telaBuscarInput").value;
     limpar.innerHTML = "";
     mostrar.style.display = "none";
@@ -25,8 +27,10 @@ function TelaAlterar() {
   if (mostrar.style.display == "none") {
     mostrar.style.display = "flex";
     sumirBuscar.style.display = "none";
+    Exibir_Desfoque_Fundo();
     CopiarDadosAlterar();
   } else {
+    Ocultar_Desfoque_Fundo();
     mostrar.style.display = "none";
   }
 }
@@ -71,7 +75,8 @@ function Exibir_TelaBuscar() {
 
 //Exibe lista com os resultados
 function Exibir_TelaLista() {
-  Exibir_Desfoque_Fundo()
+  Exibir_Desfoque_Fundo();
+  Buscar();
   let mostrar = document.getElementById("telaLista");
   mostrar.style.display = "flex";
 }
