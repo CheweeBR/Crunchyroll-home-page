@@ -1,6 +1,6 @@
 ## Página inicial do Crunchyroll
 
-### Objetivos ❕❗
+### Objetivos ❕
 
 #### Esse site tem como inspiração a replicação da página inicial do site https://www.crunchyroll.com/ utilizando apenas técnicas de Front End sem conexão com banco de dados, o armazenamento é realizado com a API LocalStorage.
 
