@@ -76,7 +76,8 @@ function Exibir_TelaBuscar() {
 //Exibe lista com os resultados
 function Exibir_TelaLista() {
   Exibir_Desfoque_Fundo();
-  Buscar();
+  const bd = new BancoDeDados();
+  bd.Buscar("");
   let mostrar = document.getElementById("telaLista");
   mostrar.style.display = "flex";
 }
