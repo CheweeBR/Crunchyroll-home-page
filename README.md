@@ -14,4 +14,4 @@
 
 #### Projeto designado pela disciplina de Desenvolvimento Web FrontEnd cursado em 2023/01.
 
-## Deploy: https://celadon-sorbet-ff11ef.netlify.app/
+### Deploy: https://celadon-sorbet-ff11ef.netlify.app/
