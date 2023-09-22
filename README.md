@@ -6,9 +6,11 @@
 
 ### Requisitos Funcionais -->
 
+<div>
 <li>CRUD: Realizado com API LocalStorage e encapsulado na classe BancoDeDados.js</li>
 <li>Objeto Principal: Definido objeto Anime através da classe Anime.js e realizado a criação dos Getters and Setters</li> 
-<li><p>Exceções: Classe Excecoes.js responsável por tratar exceções e validar dados inseridos na função Cadastrar e Alterar</p></li>
+<li>Exceções: Classe Excecoes.js responsável por tratar exceções e validar dados inseridos na função Cadastrar e Alterar</li>
+</div>
 
 #### Projeto designado pela disciplina de Desenvolvimento Web FrontEnd cursado em 2023/01.
 
