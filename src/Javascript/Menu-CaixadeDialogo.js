@@ -1,22 +1,12 @@
 // Evitar a reinicialização da página ao realizar o submit da função busca
-document.getElementById('telaBuscar').addEventListener('submit', function(evt){
-  evt.preventDefault();
-})
 
-document.getElementById('telaBuscar').addEventListener('focusout', function(){
-  var buscar = document.getElementById("bt-buscar");
-  if(buscar == 0) {
-    Buscar();
-  }
-  TelaBuscar();
-})
 
 function TelaCadastrar() {
   let mostrar = document.getElementById("telaCadastro");
   let sumirPropaganda = document.querySelector(".Propaganda");
   let sumirBuscar = document.getElementById("telaBuscar");
   if (mostrar.style.display == "none") {
-    LimparCamposCad();
+    limparCadastro();
     mostrar.style.display = "flex";
     sumirPropaganda.style.display = "none";
     sumirBuscar.style.display = "none";
@@ -28,12 +18,6 @@ function TelaCadastrar() {
   }
 }
 
-function LimparCamposCad(){
-  document.querySelector("#nomeCad").value = "";
-  document.querySelector("#descricao").value = "";
-  document.querySelector("#data").value = "";
-  document.querySelector("#imagem").value = "";
-}
 
 function TelaAlterar() {
   let mostrar = document.getElementById("telaAlterar");
@@ -58,34 +42,42 @@ function CopiarDadosAlterar(){
   document.querySelector("#imagemAlt").value = img;
 }
 
-function TelaBuscar() {
+// Pop Up de busca
+function Ocultar_TelaBuscar() {
+  Ocultar_Desfoque_Fundo();
+  let mostrar = document.getElementById("telaBuscar");
+  let mostrarIcones = document.querySelector(".Icones-right");
+  let mostrarCab = document.querySelector(".cabeçalho-right");
+  mostrar.style.display = "none";
+  mostrarIcones.style.visibility = "visible";
+  mostrarCab.style.visibility = "visible";
+}
+
+function Exibir_TelaBuscar() {
+  Exibir_Desfoque_Fundo();
   let mostrar = document.getElementById("telaBuscar");
   let mostrarcad = document.getElementById("telaCadastro");
   let mostrarIcones = document.querySelector(".Icones-right");
   let mostrarCab = document.querySelector(".cabeçalho-right");
   let sumirPropaganda = document.querySelector(".Propaganda");
-  if (mostrar.style.display == "none") {
-    mostrar.style.display = "flex";
-    sumirPropaganda.style.display = "flex";
-    mostrarcad.style.display = "none";
-    mostrarIcones.style.visibility = "hidden";
-    mostrarCab.style.visibility = "hidden";
-    let campoInput = document.getElementById("telaBuscarInput");
-    campoInput.focus();
-  } else {
-    mostrar.style.display = "none";
-    mostrarIcones.style.visibility = "visible";
-    mostrarCab.style.visibility = "visible";
-  }
+  mostrar.style.display = "flex";
+  sumirPropaganda.style.display = "flex";
+  mostrarcad.style.display = "none";
+  mostrarIcones.style.visibility = "hidden";
+  mostrarCab.style.visibility = "hidden";
+  let campoInput = document.getElementById("telaBuscarInput");
+  campoInput.focus();
 }
 
 //Exibe lista com os resultados
 function Exibir_TelaLista() {
+  Exibir_Desfoque_Fundo()
   let mostrar = document.getElementById("telaLista");
   mostrar.style.display = "flex";
 }
 
 function Ocultar_TelaLista() {
+  Ocultar_Desfoque_Fundo();
   let mostrar = document.getElementById("telaLista");
   mostrar.style.display = "none";
   var result = document.querySelector(".result");
@@ -141,3 +133,41 @@ function Ocultar_bt_alterarDeletar() {
 let mostrar = document.querySelector(".bt_alterarDeletar");
 mostrar.style.display = "none";
 }
+
+
+// Efeito Blur em toda a pagina
+
+function Exibir_Desfoque_Fundo(){
+  var cabecalho = document.querySelector(".cabeçalho-base");
+  var centro = document.querySelector(".centro-img");
+  var descricao = document.querySelector("#Campo_descriçãoAnimes");
+  cabecalho.style.filter = "blur(2px)";
+  centro.style.filter = "blur(2px)";
+  descricao.style.filter = "blur(2px)";
+}
+
+function Ocultar_Desfoque_Fundo(){
+  var cabecalho = document.querySelector(".cabeçalho-base");
+  var centro = document.querySelector(".centro-img");
+  var descricao = document.querySelector("#Campo_descriçãoAnimes");
+  cabecalho.style.filter = "none";
+  centro.style.filter = "none";
+  descricao.style.filter = "none";
+}
+
+// Evento de enviar o form de busca
+document.getElementById('telaBuscar').addEventListener('submit', function(evt){
+  evt.preventDefault();
+})
+
+
+
+document.getElementById('telaBuscar').addEventListener('focusout', function(){
+  /*tela = document.getElementById("telaBuscar");
+  tela.setAttribute("data-active", true);*/
+  /*if(a){
+    Buscar();
+  }*/
+  
+  Ocultar_TelaBuscar();
+})

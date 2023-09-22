@@ -26,9 +26,24 @@ function checkLink() {
   let labelAnime = document.querySelector("#Txt_link_telaCadastro");
   if (!valorAnime.value.startsWith("http")) {
     labelAnime.style.color = "red";
-    labelAnime.innerHTML =
-      "* O link deve obrigatoriamente começar com 'http...'.";
+    labelAnime.innerHTML = "* O link deve obrigatoriamente começar com 'http...'.";
     return false;
   }
   return true;
+}
+
+function limparCadastro(){
+  let labellink = document.querySelector("#Txt_link_telaCadastro");
+  let labeldescricao = document.querySelector("#Txt_descricao_telaCadastro");
+  let labelNome = document.querySelector("#Txt_Nome_telaCadastro");
+  document.querySelector("#nomeCad").value = "";
+  document.querySelector("#descricao").value = "";
+  document.querySelector("#data").value = "";
+  document.querySelector("#imagem").value = "";
+  labelNome.innerHTML = "Nome: ";
+  labelNome.style.color = "white";
+  labeldescricao.innerHTML="";
+  labeldescricao.style.color = "white";
+  labellink.style.color = "white";
+  labellink.innerHTML ="";
 }
