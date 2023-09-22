@@ -16,7 +16,20 @@ body {
 
 /* Proporção */
 
-@media(min-width:1135px){
+@media(min-width:1912px){
+    .Propaganda{ 
+        max-height: 85%;
+    }
+    .centro-propaganda{
+        max-height: 85%;
+    }
+    .conteudo {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+@media(min-width:1135px) and (max-width: 1912px){
     .Propaganda{ 
         max-height: 85%;
     }
