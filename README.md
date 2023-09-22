@@ -2,7 +2,7 @@
 
 ### Objetivos ❕
 
-#### Esse projeto tem como inspiração a replicação da página inicial do site https://www.crunchyroll.com/ utilizando apenas técnicas de Front End sem conexão com banco de dados, o armazenamento é realizado com a API LocalStorage, algumas funcionalidades como adição e exclusão de objetos estão disponíveis, pois, o usuário des.
+#### Esse projeto tem como inspiração a replicação da página inicial do site https://www.crunchyroll.com/ utilizando apenas técnicas de Front End sem conexão com banco de dados, o armazenamento é realizado com a API LocalStorage, algumas funcionalidades como adição e exclusão de objetos estão disponíveis.
 
 ### Requisitos Funcionais 📋
 
