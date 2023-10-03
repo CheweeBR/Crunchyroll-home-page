@@ -1,4 +1,4 @@
-## Clone da página inicial do Crunchyroll
+## Cópia da página inicial do Crunchyroll
 
 ### Objetivos ❕
 
